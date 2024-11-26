@@ -1,12 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    hey
+
+<body class="bg-gray-100">
+
+    <div class="flex min-h-screen flex-nowrap">
+        <!-- side bar -->
+        <div class="w-64 bg-gray-800 hidden md:block">
+            <!-- dashboard text wrapper -->
+            <div class="h-20 flex justify-center items-center bg-gray-900">
+                <h1 class="text-white text-2xl  "> Dashboard</h1>
+            </div>
+            <nav class="mt-10">
+                <a href="#" class="flex items-center py-2 px-6 bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx-3">Home</span>
+                </a>
+                <a href="#"
+                    class="flex items-center py-2 px-6 hover:bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx-3 ">Analytics</span>
+                </a>
+                <a href="#"
+                    class="flex items-center py-2 px-6 hover:bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx-3">Sales</span>
+                </a>
+                <a href="#"
+                    class="flex items-center py-2 px-6 hover:bg-gray-700 text-gray-100 mt-4 hover:text-gray-400">
+                    <span class="mx-3 ">Messages</span>
+                </a>
+            </nav>
+        </div>
+        <!-- main content -->
+        <div class=" flex flex-col w-full">
+            <!-- nav bar -->
+            <header class="flex items-center bg-white px-4 h-16 ">
+                <!-- sidebar button -->
+                <button
+                    class="md:hidden px-4 py-2 border rounded-md text-gray-400 border-gray-300 hover:text-gray-800  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1
+                             .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0
+                              0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </button>
+
+
+                <div class="ml-auto flex items-center">
+                    <button class="flex items-center px-4 py-2 border rounded-xl md text-white border-gray-300 bg-red-400 hover:bg-red-600">
+                        <span class="mr-2">Sign out</span>
+                    </button>
+                </div>
+            </header>
+            <!-- content -->
+            <main class="p-4 md:p-6">
+                <!-- card warpper -->
+                <div class="flex flex-wrap gap-5">
+                    <!-- card 1 -->
+                    <div
+                        class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[40%] transition-shadow duration-300 ease-in-out hover:shadow-none">
+                        <h3 class="text-xl font-semibold mb-4">Revenue</h3>
+                        <p class="text-gray-600 text-3xl">$12,000</p>
+                    </div>
+                    <div
+                        class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[40%] transition-shadow duration-300 ease-in-out hover:shadow-none  hover:shadow-none">
+                        <h3 class="text-xl font-semibold mb-4">Users</h3>
+                        <p class="text-gray-600 text-3xl">5,000</p>
+                    </div>
+                    <div
+                        class="bg-white p-4 md:p-6 rounded-lg shadow-lg min-w-[40%] transition-shadow duration-300 ease-in-out hover:shadow-none hover:shadow-none">
+                        <h3 class="text-xl font-semibold mb-4">Sales</h3>
+                        <p class="text-gray-600 text-3xl">4512</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-semibold text-gray-700">Recent activites</h2>
+                        <button class="py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-800">View All</button>
+                    </div>
+                    <div class="bg white p-4 md:p-6 rounded-lg shadow-lg mt-4 overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left border-b">
+                                    <th class="py-2">Date</th>
+                                    <th class="py-2">Activity</th>
+                                    <th class="py-2">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-green-600"> Completed</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-green-600"> Completed</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-yellow-600"> Pending</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-green-600"> Completed</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-green-600"> Completed</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-2"> 01/01/2024</td>
+                                    <td class="py-2"> Logged in</td>
+                                    <td class="py-2 text-green-600"> Completed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div>
+                        <div class="bg-white p-4 md:p-6 rounded-lg h-64 mt-8">
+                            <h3 class="text-xl font-semibold mb-4">Activity feed</h3>
+                            <div class="overflow-y-scroll h-[80%]">
+                                <div class="flex items-center mb-4">
+                                    <div class=" text-white w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                                        JD
+                                    </div>
+                                    <div class="ml-4">
+                                        <P class="font-semibold ">John Dow</P>
+                                        <p class="text-gray-600">Logged in</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class=" text-white w-10 h-10 rounded-full bg-green-600 flex items-center justify-center">
+                                        JD
+                                    </div>
+                                    <div class="ml-4">
+                                        <P class="font-semibold ">John Dow</P>
+                                        <p class="text-gray-600">Logged in</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class=" text-white w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
+                                        JD
+                                    </div>
+                                    <div class="ml-4">
+                                        <P class="font-semibold ">John Dow</P>
+                                        <p class="text-gray-600">Logged in</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class=" text-white w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                                        JD
+                                    </div>
+                                    <div class="ml-4">
+                                        <P class="font-semibold ">John Dow</P>
+                                        <p class="text-gray-600">Logged in</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </body>
+
 </html>
